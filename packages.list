@@ -9,13 +9,7 @@ luci-app-openclash
 luci-i18n-aria2-zh-cn
 luci-i18n-adbyby-plus-zh-cn
 luci-i18n-arpbind-zh-cn
-luci-compat
 luci-i18n-samba4-zh-cn
 -automount
 bash
 
-#luci-i18n-wechatpush-zh-cn
-#luci-i18n-wol-zh-cn
-#luci-i18n-lucky-zh-cn
-#luci-i18n-msd_lite-zh-cn
-#luci-i18n-nlbwmon-zh-cn
