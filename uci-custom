@@ -4,7 +4,7 @@
 # wlan_name="ImmortalWrt"
 # wlan_password="12345678"
 #
-root_password=""
+#root_password=""
 lan_ip_address="192.168.50.1"
 #
  pppoe_username="18302777318"
