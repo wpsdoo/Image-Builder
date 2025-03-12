@@ -9,7 +9,6 @@ luci-app-openclash
 luci-i18n-aria2-zh-cn
 luci-i18n-adbyby-plus-zh-cn
 luci-i18n-arpbind-zh-cn
-luci-i18n-ttyd-zh-cn
 luci-compat
 luci-i18n-samba4-zh-cn
 -automount
