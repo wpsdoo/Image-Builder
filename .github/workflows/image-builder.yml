@@ -1,24 +1,16 @@
 name: ImmortalWrt Image Builder
 on:
-  #push:
-    #branches: [ "master" ]
-  #workflow_dispatch:
-  repository_dispatch:
+  push:
+    branches: [ "master" ]
   workflow_dispatch:
-    inputs:
-      url:
-        description: 'imagebuilder_Url'
-        required: true
-        default: 'https://downloads.immortalwrt.org/releases/23.05-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64.Linux-x86_64.tar.xz'
 
 env:
   PROFILE: generic
   UCI_CUSTOM_FILE: uci-custom
   PACKAGES_LIST_FILE: packages.list
   PACKAGES_FOLDER: packages
-  ROOTFS_PARTSIZE: 1024   # Reconfigure the rootfs partition size (for x86 build only), variable set in MB
-  #DOWNLOAD_URL: https://downloads.immortalwrt.org/releases/23.05-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64.Linux-x86_64.tar.xz
-  #DOWNLOAD_URL: https://downloads.immortalwrt.org/releases/24.10-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-24.10-SNAPSHOT-x86-64.Linux-x86_64.tar.zst
+  # ROOTFS_PARTSIZE: 512   # Reconfigure the rootfs partition size (for x86 build only), variable set in MB
+  DOWNLOAD_URL: https://downloads.immortalwrt.org/releases/23.05.4/targets/x86/64/immortalwrt-imagebuilder-23.05.4-x86-64.Linux-x86_64.tar.xz
   TZ: Asia/Shanghai
 
 jobs:
@@ -34,20 +26,12 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo apt-get update
-        sudo apt-get install -y build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk git gettext libssl-dev xsltproc wget unzip python3 qemu-utils genisoimage tar zstd
-    
-    - name: Check if ssh input is empty
-      if: ${{ github.event.inputs.url != '' }}
-      env:
-          DOWNLOAD_URL: ${{github.event.inputs.url}}
+        sudo apt-get install -y build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk git gettext libssl-dev xsltproc wget unzip python3 qemu-utils genisoimage
+
+    - name: Download and extract Image Builder
       run: |
         wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
         sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
-          
-    #- name: Download and extract Image Builder
-    #  run: |
-    #    wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
-    #    sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
 
     - name: Set Image Builder root directory
       run: |
