@@ -37,14 +37,12 @@ jobs:
         sudo apt-get install -y build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk git gettext libssl-dev xsltproc wget unzip python3 qemu-utils genisoimage tar zstd
     
     - name: Check if ssh input is empty
-      if: ${{ github.event.inputs.url == '' }}
-      run: |
-        echo "The 'DOWNLOAD_URL' input is empty. Exiting the workflow."
-        exit 1
+      if: ${{ github.event.inputs.url != '' }}
+      env:
+          DOWNLOAD_URL: ${{getihub.event.inputs.url}}
           
     - name: Download and extract Image Builder
       run: |
-        DOWNLOAD_URL=${{getihub.event.inputs.url}}
         wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
         sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
 
