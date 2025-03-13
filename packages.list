@@ -13,4 +13,4 @@ luci-i18n-samba4-zh-cn
 -automount
 bash
 libopenssl-legacy
-
+luci-i18n-filetransfer-zh-cn
