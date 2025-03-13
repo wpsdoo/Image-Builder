@@ -6,8 +6,8 @@ on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
-      DOWNLOAD_URL:
-        description: 'imagebuilder_Url_Path'
+      url:
+        description: 'imagebuilder_Url'
         required: true
         default: 'https://downloads.immortalwrt.org/releases/23.05-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64.Linux-x86_64.tar.xz'
 
@@ -37,14 +37,14 @@ jobs:
         sudo apt-get install -y build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk git gettext libssl-dev xsltproc wget unzip python3 qemu-utils genisoimage tar zstd
     
     - name: Check if ssh input is empty
-      if: ${{ github.event.inputs.DOWNLOAD_URL == '' }}
+      if: ${{ github.event.inputs.url == '' }}
       run: |
         echo "The 'DOWNLOAD_URL' input is empty. Exiting the workflow."
         exit 1
           
     - name: Download and extract Image Builder
       run: |
-        DOWNLOAD_URL=github.event.inputs.DOWNLOAD_URL
+        DOWNLOAD_URL=${{getihub.event.inputs.url}}
         wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
         sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
 
