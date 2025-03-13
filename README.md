@@ -25,13 +25,14 @@ Use Github Action for a easier way to compile firmwares with Image Builder.
 - 单击 “运行工作流” 按钮。
 - 构建完成后，单击 “工件” 下的文件链接以下载固件。
 
-❤1.简单使用方法，fork项目，
-  2.编辑“uci-custom”文件自定义设置。
-  3.编辑packages.list文件，添加包例如：“luci-app-openclash”， 删除默认包，在包名前输入“-” 例如：“-luci-app-aria2”。
-  4.需要添加第三方插件的，把ipk文件以及依赖ipk 上传到packages文件夹里，编辑packages.list文件，依赖文件会自动安装。例如添加“luci-i18n-minidlna-zh-cn” 会自动安装luci-app-minidlna。
-  5.点击GitHub页面上[Action](https://github.com/wpsdoo/Image-Builder/actions)按钮,点击左侧“ImmortalWrt Image Builder”，点击右侧“Run workflow”，
+💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕💕
+  1. 简单使用方法，fork项目。
+  2. 编辑“uci-custom”文件自定义设置。
+  3. 编辑packages.list文件，添加包例如：`luci-app-openclash`， 删除默认包，在包名前输入“-” 例如：`-luci-app-aria2`。
+  4. 需要添加第三方插件的，把ipk文件以及依赖ipk 上传到packages文件夹里，编辑packages.list文件，依赖文件会自动安装。例如添加 `luci-i18n-minidlna-zh-cn`会自动安装 `luci-app-minidlna`
+  5. 点击GitHub页面上[Action](https://github.com/wpsdoo/Image-Builder/actions)按钮,点击左侧“ImmortalWrt Image Builder”，点击右侧“Run workflow”，
     在弹出框imagebuilder_Url_Path文本框里输入完整的Image-Builder路径，在点击绿色的Run workflow按钮开始自动编译。
-  6.等待几分钟后在Action页面下载编译好的文件。
+  6. 等待几分钟后在Action页面下载编译好的文件。
  
  immortalwrt下载地址：[Project ImmortalWrt](https://downloads.immortalwrt.org/releases/)
  完整的Image-Builder路径：https://downloads.immortalwrt.org/releases/23.05-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64.Linux-x86_64.tar.xz
