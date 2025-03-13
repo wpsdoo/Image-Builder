@@ -13,6 +13,7 @@ luci-i18n-ksmbd-zh-cn
 luci-i18n-appfilter-zh-cn
 luci-i18n-ramfree-zh-cn
 luci-i18n-attendedsysupgrade-zh-cn
+luci-i18n-cifs-mount-zh-cn
 luci-app-wizard
 -automount
 bash
