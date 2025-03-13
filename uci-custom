@@ -5,7 +5,7 @@
 # wlan_password="12345678"
 #
 root_password=""
-lan_ip_address="192.168.31.1"
+lan_ip_address="192.168.2.1"
 #
  pppoe_username="18302777318"
  pppoe_password="888888"
@@ -42,6 +42,7 @@ fi
 # Configure PPPoE
 # More options: https://openwrt.org/docs/guide-user/network/wan/wan_interface_protocols#protocol_pppoe_ppp_over_ethernet
 if [[ -n "$pppoe_username" && -n "$pppoe_password" ]]; then
+  uci set network.lan.device='eth1'
   uci set network.wan=interface
   uci set network.wan.device="$wan_device"
   uci set network.wan.proto="pppoe"
