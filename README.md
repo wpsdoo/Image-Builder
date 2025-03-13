@@ -16,7 +16,7 @@ Use Github Action for a easier way to compile firmwares with Image Builder.
 - Click the `Run workflow` button.
 - When the build is completed, click the file links under `Artifacts` to download the firmwares.
   
--单击 [使用此模板]（https://github.com/noviachen/Image-Builder/generate）按钮以创建新的存储库。
+- 单击 [使用此模板]（https://github.com/noviachen/Image-Builder/generate）按钮以创建新的存储库。
 - 默认情况下，使用 immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64 构建。要更改它，请修改 “. github/workflow/image-builder.yml” 中的 “DOWNLOAD_URL”。也可能适用于编译官方 OpenWrt 版本（未经测试）。
 - 根据您的设备修改 image-builder. yml 中的 “PROFILE”。
 - 根据需要修改 “uci - custom”（第一个引导脚本）和 “packages.list”（添加或删除包）。
