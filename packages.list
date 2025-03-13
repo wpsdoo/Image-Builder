@@ -12,6 +12,7 @@ luci-i18n-arpbind-zh-cn
 luci-i18n-ksmbd-zh-cn
 luci-i18n-appfilter-zh-cn
 luci-i18n-ramfree-zh-cn
+luci-app-wizard
 -automount
 bash
 libopenssl-legacy
