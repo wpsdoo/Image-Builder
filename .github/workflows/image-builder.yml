@@ -40,11 +40,14 @@ jobs:
       if: ${{ github.event.inputs.url != '' }}
       env:
           DOWNLOAD_URL: ${{getihub.event.inputs.url}}
-          
-    - name: Download and extract Image Builder
       run: |
         wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
         sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
+          
+    #- name: Download and extract Image Builder
+    #  run: |
+    #    wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
+    #    sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
 
     - name: Set Image Builder root directory
       run: |
