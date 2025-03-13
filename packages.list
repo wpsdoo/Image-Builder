@@ -16,6 +16,7 @@ luci-i18n-attendedsysupgrade-zh-cn
 luci-i18n-cifs-mount-zh-cn
 luci-i18n-diskman-zh-cn
 luci-app-wizard
+luci-theme-kucat
 -automount
 bash
 libopenssl-legacy
