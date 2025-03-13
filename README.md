@@ -35,6 +35,7 @@ Use Github Action for a easier way to compile firmwares with Image Builder.
   6. 等待几分钟后在Action页面下载编译好的文件。
  
  immortalwrt下载地址：[Project ImmortalWrt](https://downloads.immortalwrt.org/releases/)
+ 
  完整的Image-Builder路径：https://downloads.immortalwrt.org/releases/23.05-SNAPSHOT/targets/x86/64/immortalwrt-imagebuilder-23.05-SNAPSHOT-x86-64.Linux-x86_64.tar.xz
 
 ## Thanks
