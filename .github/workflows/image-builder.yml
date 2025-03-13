@@ -39,7 +39,7 @@ jobs:
     - name: Check if ssh input is empty
       if: ${{ github.event.inputs.url != '' }}
       env:
-          DOWNLOAD_URL: ${{getihub.event.inputs.url}}
+          DOWNLOAD_URL: ${{github.event.inputs.url}}
       run: |
         wget -O /tmp/imagebuilder.tar.xz $DOWNLOAD_URL
         sudo tar -C /tmp -xvf /tmp/imagebuilder.tar.xz
