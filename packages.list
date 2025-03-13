@@ -7,9 +7,11 @@ luci-i18n-zerotier-zh-cn
 luci-theme-argon
 luci-app-openclash
 luci-i18n-aria2-zh-cn
-luci-i18n-adbyby-plus-zh-cn
+luci-i18n-advanced-reboot-zh-cn
 luci-i18n-arpbind-zh-cn
-luci-i18n-samba4-zh-cn
+luci-i18n-ksmbd-zh-cn
+luci-i18n-appfilter-zh-cn
+luci-i18n-ramfree-zh-cn
 -automount
 bash
 libopenssl-legacy
