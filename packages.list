@@ -10,11 +10,13 @@ luci-i18n-aria2-zh-cn
 luci-i18n-advanced-reboot-zh-cn
 luci-i18n-arpbind-zh-cn
 luci-i18n-ksmbd-zh-cn
-luci-i18n-appfilter-zh-cn
 luci-i18n-ramfree-zh-cn
 luci-i18n-cifs-mount-zh-cn
 luci-i18n-diskman-zh-cn
 luci-app-wizard
+luci-app-advancedplus
+luci-i18n-advancedplus-zh-cn
+luci-theme-kucat
 automount
 bash
 libopenssl-legacy
