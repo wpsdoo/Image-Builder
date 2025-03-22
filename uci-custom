@@ -42,7 +42,7 @@ fi
 # Configure PPPoE
 # More options: https://openwrt.org/docs/guide-user/network/wan/wan_interface_protocols#protocol_pppoe_ppp_over_ethernet
 if [[ -n "$pppoe_username" && -n "$pppoe_password" ]]; then
-  uci set network.lan.device='eth0'
+  uci set network.lan.device='eth1'
   uci set network.wan=interface
   uci set network.wan.device="$wan_device"
   uci set network.wan.proto="pppoe"
