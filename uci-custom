@@ -7,9 +7,9 @@
 root_password=""
 lan_ip_address="192.168.31.1"
 #
-pppoe_username=""
-pppoe_password=""
-wan_device="eth0"
+#pppoe_username=""
+#pppoe_password=""
+#wan_device="eth0"
 #
 # ttyd_auto_login="/bin/login -f root"
 # shell="/bin/bash"
