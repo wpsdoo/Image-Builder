@@ -3,6 +3,12 @@ on:
   push:
     branches: [ "master" ]
   workflow_dispatch:
+    inputs:
+      source_branch:
+        description: "Select the source branch"
+        required: false
+        default: "openwrt-main"
+        type: choice
 
 env:
   PROFILE: generic
