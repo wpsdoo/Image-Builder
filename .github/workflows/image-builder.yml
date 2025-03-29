@@ -9,6 +9,7 @@ on:
         required: false
         default: "openwrt-main"
         type: choice
+        options:
           - openwrt-main
           - immortalwrt-master
         
