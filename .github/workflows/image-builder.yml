@@ -5,10 +5,13 @@ on:
   workflow_dispatch:
     inputs:
       source_branch:
-        description: "Select the source branch"
+        description: "选择源分支"
         required: false
         default: "openwrt-main"
         type: choice
+          - openwrt-main
+          - immortalwrt-master
+        
 
 env:
   PROFILE: generic
