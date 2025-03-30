@@ -12,6 +12,11 @@ on:
         options:
           - immortalwrt-master
           - openwrt-main
+      profile :
+        description: "目标设备"
+        default: "x86"
+        
+    
         
 
 env:
