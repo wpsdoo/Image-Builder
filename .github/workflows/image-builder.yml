@@ -7,7 +7,7 @@ on:
       source_branch:
         description: "选择源分支"
         required: false
-        default: "openwrt-main"
+        default: "immortalwrt-master"
         type: choice
         options:
           - immortalwrt-master
