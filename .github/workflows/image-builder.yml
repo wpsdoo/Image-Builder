@@ -1,4 +1,4 @@
-name: ImmortalWrt Image Builder
+name: 云编译- immortalwrt
 on:
   push:
     branches: [ "master" ]
