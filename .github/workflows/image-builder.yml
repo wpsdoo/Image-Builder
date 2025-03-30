@@ -63,6 +63,7 @@ jobs:
     - name: Modify .config file
       run: |
         CONFIG_FILE="$ROOT_DIRECTORY/.config"
+        REPOSITORIES_CONF="$ROOT_DIRECTORY/ repositories.conf "
         # Disable iso and virtual disk image generation for x86
         sudo sed -i 's/^CONFIG_ISO_IMAGES=y/# CONFIG_ISO_IMAGES is not set/' $CONFIG_FILE
         sudo sed -i 's/^CONFIG_QCOW2_IMAGES=y/# CONFIG_QCOW2_IMAGES is not set/' $CONFIG_FILE
@@ -73,7 +74,10 @@ jobs:
         if [ -n "${{ env.ROOTFS_PARTSIZE }}" ] && [ "${{ env.PROFILE }}" = "generic" ]; then
           sudo sed -i 's/CONFIG_TARGET_ROOTFS_PARTSIZE=.*/CONFIG_TARGET_ROOTFS_PARTSIZE=${{ env.ROOTFS_PARTSIZE }}/g' $CONFIG_FILE
         fi
-
+        # 配置自定义插件源
+        sudo sed -i 's/^option check_signature/# option check_signature/' $REPOSITORIES_CONF
+        sudo sed -i '6a\https://op.dllkids.xyz/packages/x86_64/' $REPOSITORIES_CONF
+          
     - name: Copy files
       run: |
         # Creator folders
