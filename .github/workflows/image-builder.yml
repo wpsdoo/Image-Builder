@@ -15,6 +15,9 @@ on:
       profile :
         description: "目标设备"
         default: "x86"
+      rootfs_partsize :
+        description: "软件包分区大小（MB）"
+        default: "1024"
         
     
         
@@ -24,7 +27,7 @@ env:
   UCI_CUSTOM_FILE: uci-custom
   PACKAGES_LIST_FILE: packages.list
   PACKAGES_FOLDER: packages
-  ROOTFS_PARTSIZE: 1024   # 修改软件包安装空间大小。只支持X86Reconfigure the rootfs partition size (for x86 build only), variable set in MB
+  ROOTFS_PARTSIZE: ${{ rootfs_partsize }}   # 修改软件包安装空间大小。只支持X86Reconfigure the rootfs partition size (for x86 build only), variable set in MB
   ##DOWNLOAD_URL: https://downloads.immortalwrt.org/releases/23.05.4/targets/x86/64/immortalwrt-imagebuilder-23.05.4-x86-64.Linux-x86_64.tar.xz
   ##DOWNLOAD_URL: https://downloads.immortalwrt.org/releases/24.10.0/targets/x86/64/immortalwrt-imagebuilder-24.10.0-x86-64.Linux-x86_64.tar.zst
   TZ: Asia/Shanghai
