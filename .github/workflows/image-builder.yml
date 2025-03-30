@@ -12,9 +12,6 @@ on:
         options:
           - immortalwrt-master
           - openwrt-main
-      profile :
-        description: "目标设备"
-        default: "x86"
       rootfs_partsize :
         description: "软件包分区大小（MB）"
         default: "1024"
