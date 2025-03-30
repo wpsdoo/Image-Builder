@@ -1,9 +1,10 @@
+###软件包
+
 luci-i18n-package-manager-zh-cn
 luci-i18n-firewall-zh-cn
 luci-i18n-ttyd-zh-cn
 luci-i18n-upnp-zh-cn
 luci-i18n-zerotier-zh-cn
-luci-theme-argon
 luci-app-openclash
 luci-i18n-aria2-zh-cn
 luci-i18n-advancedplus-zh-cn
@@ -15,6 +16,12 @@ luci-i18n-diskman-zh-cn
 luci-i18n-poweroffdevice-zh-cn
 luci-i18n-netwizard-zh-cn
 luci-i18n-nft-timecontrol-zh-cn
+
+###主题包
+luci-theme-design
 luci-theme-kucat
+luci-theme-argon
+
+###部分依赖
 bash
 libopenssl-legacy
