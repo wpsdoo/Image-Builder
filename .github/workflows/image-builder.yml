@@ -51,7 +51,7 @@ jobs:
         elif [["${{ inputs.source_branch }}" == *"openwrt"*]]; then
               REPO_URL="https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst"
         fi
-        
+        echo "REPO_URL" >> $GITHUB_ENV
         wget -O /tmp/imagebuilder.tar.zst $REPO_URL
         sudo tar -C /tmp -I zstd -xvf /tmp/imagebuilder.tar.zst
 
