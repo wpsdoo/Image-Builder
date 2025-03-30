@@ -76,7 +76,7 @@ jobs:
         fi
         # 配置自定义插件源
         sudo sed -i 's/^option check_signature/# option check_signature/g' $REPOSITORIES_CONF
-        sudo sed -i '6a\src-git openwrt_ai https://dl.openwrt.ai/releases/24.10/packages/x86_64/kiddin9/' $REPOSITORIES_CONF
+        sudo sed -i '6a\src/gz openwrt_ai https://dl.openwrt.ai/releases/24.10/packages/x86_64/kiddin9/' $REPOSITORIES_CONF
           
     - name: Copy files
       run: |
