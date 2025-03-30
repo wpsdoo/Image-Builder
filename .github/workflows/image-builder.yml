@@ -10,8 +10,8 @@ on:
         default: "openwrt-main"
         type: choice
         options:
-          - openwrt-main
           - immortalwrt-master
+          - openwrt-main
         
 
 env:
@@ -41,9 +41,9 @@ jobs:
 
     - name: Download and extract Image Builder
       run: |
-        if [[ "${{ inputs.source_branch }}" == *"openwrt"* ]]; then
+        if [[ "${{ inputs.source_branch }}" == *"immortalwrt"* ]]; then
               REPO_URL="https://downloads.immortalwrt.org/snapshots/targets/x86/64/immortalwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst"
-        elif
+        elif [["${{ inputs.source_branch }}" == *"openwrt"*]]; then
               REPO_URL="https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst"
         fi
         
