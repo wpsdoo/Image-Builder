@@ -51,7 +51,7 @@ jobs:
         elif [["${{ inputs.source_branch }}" == *"openwrt"*]]; then
               REPO_URL="https://downloads.openwrt.org/snapshots/targets/x86/64/openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst"
         fi
-        sudo echo "REPO_URL=$REPO_URL" >> $GITHUB_ENV
+        echo "REPO_URL=$REPO_URL" >> $GITHUB_ENV
         wget -O /tmp/imagebuilder.tar.zst $REPO_URL
         sudo tar -C /tmp -I zstd -xvf /tmp/imagebuilder.tar.zst
 
@@ -78,7 +78,7 @@ jobs:
         sudo sed -i 's/^option check_signature/# option check_signature/g' $REPOSITORIES_CONF
         ## sudo sed -i '6a/src\/gz openwrt_ai https:\/\/dl.openwrt.ai\/releases\/24.10\/packages\/x86_64\/kiddin9\/' $REPOSITORIES_CONF
         ## sudo sed -i '6a\src/gz openwrt_ai https://dl.openwrt.ai/releases/24.10/packages/x86_64/kiddin9' $REPOSITORIES_CONF
-        echo 'src/gz openwrt_ai https://dl.openwrt.ai/releases/24.10/packages/x86_64/kiddin9' >>$REPOSITORIES_CONF
+        sudo echo 'src/gz openwrt_ai https://dl.openwrt.ai/releases/24.10/packages/x86_64/kiddin9' >>$REPOSITORIES_CONF
     - name: Copy files
       run: |
         # Creator folders
