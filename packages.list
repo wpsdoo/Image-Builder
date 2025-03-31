@@ -17,6 +17,5 @@ luci-i18n-nft-timecontrol-zh-cn
 luci-theme-design
 luci-theme-kucat
 luci-theme-argon
-luci-theme-inas
 zsh
 libopenssl-legacy
