@@ -18,5 +18,5 @@ luci-theme-design
 luci-theme-kucat
 luci-theme-argon
 luci-theme-inas
-bash
+zsh
 libopenssl-legacy
