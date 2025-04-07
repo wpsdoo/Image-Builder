@@ -39,5 +39,5 @@ miniupnpd-iptables
 -miniupnpd-nftables
 -firewall4
 -nftables
-zsh
+-kmod-nft-offload
 libopenssl-legacy
