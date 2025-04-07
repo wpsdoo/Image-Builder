@@ -18,7 +18,3 @@ luci-theme-kucat
 luci-theme-argon
 zsh
 libopenssl-legacy
--firewall4
--dnsmasq-full
-dnsmasq
-firewall
