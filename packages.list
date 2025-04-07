@@ -38,6 +38,6 @@ iptables-zz-legacy
 miniupnpd-iptables
 -miniupnpd-nftables
 -firewall4
--kmod-nft-core
+-nftables
 zsh
 libopenssl-legacy
